@@ -29,9 +29,4 @@ function formatArrayStrings(strings, numbers) {
     return strings;
 }
 
-// Example usage:
-const strings = ["apple", "Banana", "CHERRY", "grape"];
-const numbers = [1, 2, 3, 4];
-const processedNumbers = processArray(numbers);
-const formattedStrings = formatArrayStrings(strings, processedNumbers);
-console.log(formattedStrings);
+module.exports = {processArray, formatArrayStrings};
