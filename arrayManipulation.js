@@ -12,7 +12,26 @@ function processArray(numbers) {
     return myArray;
 }
 
-// Example
-var inputArray = [1, 6, 3, 4, 5];
-var resultArray = processArray(inputArray);
-console.log(resultArray); 
+
+function formatArrayStrings(strings, numbers) {
+
+    if (strings.length !== numbers.length) {
+        throw new Error("Arrays must be of the same length");
+    }
+
+    for (let i = 0; i < strings.length; i++) {
+        if (numbers[i] % 2 === 0) {
+            strings[i] = strings[i].toUpperCase();
+        } else {
+            strings[i] = strings[i].toLowerCase();
+        }
+    }
+    return strings;
+}
+
+// Example usage:
+const strings = ["apple", "Banana", "CHERRY", "grape"];
+const numbers = [1, 2, 3, 4];
+const processedNumbers = processArray(numbers);
+const formattedStrings = formatArrayStrings(strings, processedNumbers);
+console.log(formattedStrings);
